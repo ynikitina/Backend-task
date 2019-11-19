@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Тестовая страница</title>
+        <style>
+            header {
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            body {
+                background: rgb(236, 236, 236);
+                text-align: center;
+                font-family:Arial, Helvetica, sans-serif;
+            }
+            .table {
+                background: rgb(255, 255, 255);
+                margin: auto;
+                padding: 10px;
+                width: 700px;
+            }
+            .row, .row_top {
+                display: table-row;
+                text-align: center;
+                font-weight: bold;                
+                margin: auto;
+            }
+            .col {
+                display: table-cell;
+                border-spacing: 10;
+                border-bottom: 2px solid rgb(209, 223, 245);
+                width: 200px;
+                height: 20px;
+                padding: 10px;      
+            }
+            .table_head {
+                text-align: center;
+                background: rgb(209, 223, 245);
+                font-weight: bold;                
+                margin: auto;;
+            }
+            .table_content {
+                text-align: center;
+                font-weight: bold;                
+                margin: auto;
+            }
+            .num {
+                display: table-cell;
+                border-spacing: 10;
+                width: 20px;
+                height: 20px;
+                padding: 10px;
+                border-bottom: 2px solid rgb(209, 223, 245);
+            }
+            input {
+                width: 200px;
+                height: 20px;
+                border-color: white;
+            }
+            select {
+                width: 200px;
+                height: 26px;
+                text-decoration: underline;
+                border-color: white;               
+            }
+            .my_button {
+                width: 700px;
+                overflow: hidden;
+                margin: auto;
+                background: white;
+                padding: 10px;
+                display: table;
+                height: auto;
+            }
+            .button_add {
+                width: auto;
+                height: auto;
+                padding: 6px;
+                background-color: rgb(209, 223, 245);
+                float:right;
+            }
+            .button_send {
+                width: auto;
+                height: auto;
+                padding: 6px;
+                background-color: rgb(209, 223, 245);
+                float:left;
+            }
+            .button_load {
+                width: auto;
+                height: auto;
+                padding: 6px;
+                background-color: rgb(209, 223, 245);
+                float:left;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Данные пользователей</h1>
+        </header>
+        <form>
+            <div class="table" id="table">
+                <div class="table_head">
+                    <div class="row_top">
+                        <div class="num">№</div>
+                        <div class="col">Имя</div>
+                        <div class="col">Возраст</div>
+                        <div class="col">Город</div>
+                    </div>
+                </div>
+                <div class="table_content">
+                    <div class="row" id="div_row_1">
+                        <div class="num">1</div>
+                        <div class="col">
+                            <input type="text" required class="text_edit" placeholder="Введите ФИ">
+                        </div>
+                        <div class="col">
+                            <input type="number" id="number_1" class="input_number" name="age" placeholder="Введите возраст" min="10" max="100">
+                        </div>
+                        <div class="col">
+                            <select>
+                                <option>Город не выбран</option>
+                                <option>Москва</option>
+                                <option>Санкт-Петербург</option>
+                                <option>Смоленск</option>
+                            </select>
+                        </div>           
+                    </div>
+                </div>
+            </div>
+            <div class="my_button">
+                <input type="submit" value="Отправить в БД" class="button_send">
+                <input type="submit" value="Загрузить данные" class="button_load"> 
+                <input type="submit" value="Добавить" class="button_add">
+            </div>
+        </form>
+
+        <script src="send_data.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
